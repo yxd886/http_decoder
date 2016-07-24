@@ -1,4 +1,5 @@
 #include "SessionHash.h"
+#include <arpa/inet.h>
 
 
 CSessionHashTable::CSessionHashTable()
