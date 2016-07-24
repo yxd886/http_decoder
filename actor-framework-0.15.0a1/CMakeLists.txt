@@ -326,6 +326,9 @@ install(DIRECTORY libcaf_core/caf/
 # install includes from io
 install(DIRECTORY libcaf_io/caf/ DESTINATION include/caf
         FILES_MATCHING PATTERN "*.hpp")
+# install includes from nfactor
+install(DIRECTORY libcaf_nfactor/caf/ DESTINATION include/caf
+        FILES_MATCHING PATTERN "*.hpp")
 # install includes from test
 install(DIRECTORY libcaf_test/caf/ DESTINATION include/caf
         FILES_MATCHING PATTERN "*.hpp")
@@ -353,6 +356,7 @@ add_custom_target(uninstall
 set(LIBCAF_INCLUDE_DIRS
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_core"
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_io"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_nfactor"
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_test")
 # path to caf opencl headers
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_opencl/CMakeLists.txt")
