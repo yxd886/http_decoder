@@ -3,4 +3,4 @@
 3. type this command "cmake httpfunction"
 4. type this command "cd bin"
 5. type this command "./decoder"
-result will be shown under the httpfunction folder.
+result will be shown under the folder that contains the code.txt.
