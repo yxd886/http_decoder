@@ -21,9 +21,9 @@ if (NOT CAF_BUILD_STATIC_ONLY)
                         VERSION ${CAF_VERSION}
                         OUTPUT_NAME caf_nfactor)
   if(NOT WIN32)
-    install(TARGETS libcaf_actor_shared LIBRARY DESTINATION lib)
+    install(TARGETS libcaf_nfactor_shared LIBRARY DESTINATION lib)
   endif()
-  add_dependencies(libcaf_actor_shared libcaf_actor)
+  add_dependencies(libcaf_nfactor_shared libcaf_nfactor)
 endif ()
 
 # build static library only if --build-static or --build-static-only was set

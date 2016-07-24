@@ -59,6 +59,10 @@ else()
   set(CAF_NO_PYTHON yes)
 endif()
 
+if(NOT CAF_NO_NFACTOR)
+  set(CAF_NO_NFACTOR no)
+endif()
+
 ################################################################################
 #                              get version of CAF                              #
 ################################################################################
@@ -445,6 +449,7 @@ endmacro()
 # build core and I/O library
 add_caf_lib(core)
 add_optional_caf_lib(io)
+add_optional_caf_lib(nfactor)
 
 # build opencl library if not told otherwise and OpenCL package was found
 if(NOT CAF_NO_OPENCL)
@@ -616,6 +621,7 @@ macro(invertYesNo in out)
 endmacro()
 # invert CAF_NO_* variables for nicer output
 invertYesNo(CAF_NO_IO CAF_BUILD_IO)
+invertYesNo(CAF_NO_NFACTOR CAF_BUILD_NFACTOR)
 invertYesNo(CAF_NO_EXAMPLES CAF_BUILD_EXAMPLES)
 invertYesNo(CAF_NO_TOOLS CAF_BUILD_TOOLS)
 invertYesNo(CAF_NO_UNIT_TESTS CAF_BUILD_UNIT_TESTS)
@@ -643,6 +649,7 @@ if(NOT CAF_NO_SUMMARY)
         "\nWith exceptions:   ${CAF_BUILD_WITH_EXCEPTIONS}"
         "\n"
         "\nBuild I/O module:  ${CAF_BUILD_IO}"
+        "\nBuild nf-actor:    ${CAF_BUILD_NFACTOR}"
         "\nBuild tools:       ${CAF_BUILD_TOOLS}"
         "\nBuild examples:    ${CAF_BUILD_EXAMPLES}"
         "\nBuild unit tests:  ${CAF_BUILD_UNIT_TESTS}"
