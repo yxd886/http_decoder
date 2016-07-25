@@ -59,6 +59,14 @@ else()
   set(CAF_NO_PYTHON yes)
 endif()
 
+if(NOT CAF_NO_NFACTOR)
+  set(CAF_NO_NFACTOR no)
+endif()
+
+if(NOT CAF_NO_COREIOTEST)
+  set(CAF_NO_COREIOTEST yes)
+endif()
+
 ################################################################################
 #                              get version of CAF                              #
 ################################################################################
@@ -326,6 +334,9 @@ install(DIRECTORY libcaf_core/caf/
 # install includes from io
 install(DIRECTORY libcaf_io/caf/ DESTINATION include/caf
         FILES_MATCHING PATTERN "*.hpp")
+# install includes from nfactor
+install(DIRECTORY libcaf_nfactor/caf/ DESTINATION include/caf
+        FILES_MATCHING PATTERN "*.hpp")
 # install includes from test
 install(DIRECTORY libcaf_test/caf/ DESTINATION include/caf
         FILES_MATCHING PATTERN "*.hpp")
@@ -353,6 +364,7 @@ add_custom_target(uninstall
 set(LIBCAF_INCLUDE_DIRS
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_core"
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_io"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_nfactor"
     "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_test")
 # path to caf opencl headers
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/libcaf_opencl/CMakeLists.txt")
@@ -397,7 +409,14 @@ macro(add_caf_lib name)
   if(CAF_BUILD_STATIC_ONLY OR CAF_BUILD_STATIC)
     set(${lib_varname_static} ${static_target})
   endif()
-  add_unit_tests("${full_name}/test/*.cpp")
+  #disable test if the full_name equals core or io
+  if(CAF_NO_COREIOTEST)
+      if("${full_name}" STREQUAL "libcaf_nfactor")
+          add_unit_tests("${full_name}/test/*.cpp")
+      endif()
+  else()
+      add_unit_tests("${full_name}/test/*.cpp")
+  endif()
   # add headers to include directories so other subprojects can use them
   include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libcaf_${name}")
 endmacro()
@@ -441,6 +460,7 @@ endmacro()
 # build core and I/O library
 add_caf_lib(core)
 add_optional_caf_lib(io)
+add_optional_caf_lib(nfactor)
 
 # build opencl library if not told otherwise and OpenCL package was found
 if(NOT CAF_NO_OPENCL)
@@ -612,6 +632,7 @@ macro(invertYesNo in out)
 endmacro()
 # invert CAF_NO_* variables for nicer output
 invertYesNo(CAF_NO_IO CAF_BUILD_IO)
+invertYesNo(CAF_NO_NFACTOR CAF_BUILD_NFACTOR)
 invertYesNo(CAF_NO_EXAMPLES CAF_BUILD_EXAMPLES)
 invertYesNo(CAF_NO_TOOLS CAF_BUILD_TOOLS)
 invertYesNo(CAF_NO_UNIT_TESTS CAF_BUILD_UNIT_TESTS)
@@ -639,9 +660,11 @@ if(NOT CAF_NO_SUMMARY)
         "\nWith exceptions:   ${CAF_BUILD_WITH_EXCEPTIONS}"
         "\n"
         "\nBuild I/O module:  ${CAF_BUILD_IO}"
+        "\nBuild nf-actor:    ${CAF_BUILD_NFACTOR}"
         "\nBuild tools:       ${CAF_BUILD_TOOLS}"
         "\nBuild examples:    ${CAF_BUILD_EXAMPLES}"
         "\nBuild unit tests:  ${CAF_BUILD_UNIT_TESTS}"
+        "\nNo core/io tests:  ${CAF_NO_COREIOTEST}"
         "\nBuild benchmarks:  ${CAF_BUILD_BENCHMARKS}"
         "\nBuild opencl:      ${CAF_BUILD_OPENCL}"
         "\nBuild Python:      ${CAF_BUILD_PYTHON}"
