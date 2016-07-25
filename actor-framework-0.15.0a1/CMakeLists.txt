@@ -63,6 +63,10 @@ if(NOT CAF_NO_NFACTOR)
   set(CAF_NO_NFACTOR no)
 endif()
 
+if(NOT CAF_NO_COREIOTEST)
+  set(CAF_NO_COREIOTEST yes)
+endif()
+
 ################################################################################
 #                              get version of CAF                              #
 ################################################################################
@@ -405,7 +409,14 @@ macro(add_caf_lib name)
   if(CAF_BUILD_STATIC_ONLY OR CAF_BUILD_STATIC)
     set(${lib_varname_static} ${static_target})
   endif()
-  add_unit_tests("${full_name}/test/*.cpp")
+  #disable test if the full_name equals core or io
+  if(CAF_NO_COREIOTEST)
+      if("${full_name}" STREQUAL "libcaf_nfactor")
+          add_unit_tests("${full_name}/test/*.cpp")
+      endif()
+  else()
+      add_unit_tests("${full_name}/test/*.cpp")
+  endif()
   # add headers to include directories so other subprojects can use them
   include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libcaf_${name}")
 endmacro()
@@ -653,6 +664,7 @@ if(NOT CAF_NO_SUMMARY)
         "\nBuild tools:       ${CAF_BUILD_TOOLS}"
         "\nBuild examples:    ${CAF_BUILD_EXAMPLES}"
         "\nBuild unit tests:  ${CAF_BUILD_UNIT_TESTS}"
+        "\nNo core/io tests:  ${CAF_NO_COREIOTEST}"
         "\nBuild benchmarks:  ${CAF_BUILD_BENCHMARKS}"
         "\nBuild opencl:      ${CAF_BUILD_OPENCL}"
         "\nBuild Python:      ${CAF_BUILD_PYTHON}"
