@@ -34,3 +34,111 @@ Server: GFE/2.0
   <p>The request method <code>CCM_POST</code> is inappropriate for the URL <code>/</code>.  <ins>That’s all we know.</ins>
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+128.2.6.136:46581 ===> 173.194.75.103:80
+method: 4294964224	version: 11
+retrun code : 405Method Not Allowed
+url : /
+Request Header:
+	Host:   www.google.com
+Request Context:
+CCM_POST / HTTP/1.1
+Host: www.google.com
+
+
+Response Header:
+	Content-Length:   963
+	Content-Type:   text/html; charset=UTF-8
+	Date:   Sat, 01 Dec 2012 02:29:34 GMT
+	Server:   GFE/2.0
+Response Context:
+HTTP/1.1 405 Method Not Allowed
+Content-Type: text/html; charset=UTF-8
+Content-Length: 963
+Date: Sat, 01 Dec 2012 02:29:34 GMT
+Server: GFE/2.0
+
+<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 405 (Method Not Allowed)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}
+  </style>
+  <a href=//www.google.com/><img src=//www.google.com/images/errors/logo_sm.gif alt=Google></a>
+  <p><b>405.</b> <ins>That’s an error.</ins>
+  <p>The request method <code>CCM_POST</code> is inappropriate for the URL <code>/</code>.  <ins>That’s all we know.</ins>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+128.2.6.136:46581 ===> 173.194.75.103:80
+method: 4294964224	version: 11
+retrun code : 405Method Not Allowed
+url : /
+Request Header:
+	Host:   www.google.com
+Request Context:
+CCM_POST / HTTP/1.1
+Host: www.google.com
+
+
+Response Header:
+	Content-Length:   963
+	Content-Type:   text/html; charset=UTF-8
+	Date:   Sat, 01 Dec 2012 02:29:34 GMT
+	Server:   GFE/2.0
+Response Context:
+HTTP/1.1 405 Method Not Allowed
+Content-Type: text/html; charset=UTF-8
+Content-Length: 963
+Date: Sat, 01 Dec 2012 02:29:34 GMT
+Server: GFE/2.0
+
+<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 405 (Method Not Allowed)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}
+  </style>
+  <a href=//www.google.com/><img src=//www.google.com/images/errors/logo_sm.gif alt=Google></a>
+  <p><b>405.</b> <ins>That’s an error.</ins>
+  <p>The request method <code>CCM_POST</code> is inappropriate for the URL <code>/</code>.  <ins>That’s all we know.</ins>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+128.2.6.136:46581 ===> 173.194.75.103:80
+method: 4294964224	version: 11
+retrun code : 405Method Not Allowed
+url : /
+Request Header:
+	Host:   www.google.com
+Request Context:
+CCM_POST / HTTP/1.1
+Host: www.google.com
+
+
+Response Header:
+	Content-Length:   963
+	Content-Type:   text/html; charset=UTF-8
+	Date:   Sat, 01 Dec 2012 02:29:34 GMT
+	Server:   GFE/2.0
+Response Context:
+HTTP/1.1 405 Method Not Allowed
+Content-Type: text/html; charset=UTF-8
+Content-Length: 963
+Date: Sat, 01 Dec 2012 02:29:34 GMT
+Server: GFE/2.0
+
+<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 405 (Method Not Allowed)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}
+  </style>
+  <a href=//www.google.com/><img src=//www.google.com/images/errors/logo_sm.gif alt=Google></a>
+  <p><b>405.</b> <ins>That’s an error.</ins>
+  <p>The request method <code>CCM_POST</code> is inappropriate for the URL <code>/</code>.  <ins>That’s all we know.</ins>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

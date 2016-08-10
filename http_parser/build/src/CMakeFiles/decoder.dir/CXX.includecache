@@ -11,14 +11,12 @@ Public.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Public.h
 Receiver.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Receiver.h
+netinet/ip6.h
+-
 
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/BehaviorInfo.h
 Public.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Public.h
-
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Buffer.cpp
-Buffer.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Buffer.h
 
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Buffer.h
 stdio.h
@@ -31,10 +29,6 @@ malloc.h
 -
 string.h
 -
-
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/FormatPacket.cpp
-FormatPacket.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/FormatPacket.h
 
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/FormatPacket.h
 net/if.h
@@ -62,10 +56,6 @@ stdint.h
 Public.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Public.h
 
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Handle.cpp
-Handle.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Handle.h
-
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Handle.h
 Public.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Public.h
@@ -77,14 +67,6 @@ SessionHash.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/SessionHash.h
 HttpParse.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/HttpParse.h
-
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/HttpParse.cpp
-boost/lexical_cast.hpp
--
-HttpParse.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/HttpParse.h
-arpa/inet.h
--
 
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/HttpParse.h
 Public.h
@@ -126,27 +108,11 @@ map
 list
 -
 
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Receiver.cpp
-Receiver.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/Receiver.h
-BehaviorInfo.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/BehaviorInfo.h
-FormatPacket.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/FormatPacket.h
-FormatPacket.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/FormatPacket.h
-
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Receiver.h
 Public.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Public.h
 Handle.h
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/Handle.h
-
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/SessionHash.cpp
-SessionHash.h
-/home/sunmmer/httpfunc/http_parser/httpfunction/src/SessionHash.h
-arpa/inet.h
--
 
 /home/sunmmer/httpfunc/http_parser/httpfunction/src/SessionHash.h
 boost/shared_ptr.hpp
